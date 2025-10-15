@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h2>{{ article.title }}</h2>
+<p><strong>Author:</strong> {{ article.author.username }}</p>
+<p>{{ article.content }}</p>
+<a href="/">Back to articles</a>
+{% if user.is_authenticated and user == article.author %}
+<form action="/article/{{article.id}}/delete/" method="post">{%csrf_token%}<button>Delete</button></form> 
+
+<form action="/edit/{{article.id}}/" method="get">{%csrf_token%}<button>Edit</button></form> 
+{% endif %}
+{% endblock %}

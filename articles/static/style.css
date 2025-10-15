@@ -1,0 +1,77 @@
+/* General layout */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f8f6f1;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #ece8dc;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #b07a2c;
+}
+
+/* Main content */
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ddd;
+}
+
+/* Articles */
+.article-list li {
+    list-style: none;
+    margin: 10px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Buttons and inputs */
+button, input[type="text"], input[type="email"], input[type="password"], select, textarea {
+    font-family: inherit;
+    padding: 8px 12px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    background-color: #b07a2c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8e6222;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ece8dc;
+    color: #555;
+    font-size: 14px;
+    margin-top: 30px;
+}
+

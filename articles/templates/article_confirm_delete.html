@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="article-container">
+    <h1>{{ article.title }}</h1>
+    <p><strong>Author:</strong> {{ article.author.username }}</p>
+    <p><strong>Category:</strong> {{ article.category.name }}</p>
+    <p>{{ article.content|linebreaks }}</p>
+
+    {% if article.image %}
+      <img src="{{ article.image.url }}" alt="{{ article.title }}" class="article-image">
+    {% endif %}
+
+    {% if user.is_authenticated and user == article.author %}
+      <div class="actions">
+        <a href="{% url 'article_edit' article.pk %}" class="btn btn-edit">Edit</a>
+        <a href="{% url 'article_delete' article.pk %}" class="btn btn-delete">Delete</a>
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}
